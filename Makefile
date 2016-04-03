@@ -1,0 +1,18 @@
+#
+# Makefile
+#
+# David J. Malan
+# malan@harvard.edu
+#
+
+all: globe
+
+globe: globe.c Makefile
+	clang -ggdb3 -O0 -std=c99 -Wall -Werror -o globe globe.c -lcs -lm
+glb: glb.c Makefile
+	clang -ggdb3 -O0 -std=c99 -Wall -Werror -o glb glb.c -lcs -lm
+NEW: NEW.c Makefile
+	clang -ggdb3 -O0 -std=c99 -Wall -Werror -o NEW NEW.c -lcs -lm
+
+clean:
+	rm -f *.o core bounce button checkbox click cursor label slider text window
